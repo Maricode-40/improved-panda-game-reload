@@ -20,11 +20,11 @@ Used technologies:
 
 ### Features
 
-HTML5 provides the semantic structure:
+HTML canvas element as container for graphics, then using a script for the drawing.
 
  < main > → game container
 
-< header > → live score( < output >)
+< header > → live score - span text -
 
 < section > → play area with the panda (player), spour water (obstacle), and yatch (goal).
 
