@@ -32,7 +32,7 @@ function initDOM() {
 }
 function initSounds() {
   sounds = {
-    jump: new Audio("../assets/sounds/jumping-sound.mp3"),
+    jump: new Audio("../assets/sounds/jumping-sound.wav"),
     gameOver: new Audio("../assets/sounds/drowning.mp3"),
     win: new Audio("../assets/sounds/game-win-other.mp3"),
   };

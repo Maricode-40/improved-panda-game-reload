@@ -1,35 +1,52 @@
-const canvas = document.getElementById("menuCanvas");
+const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// Draw retro border
 
-function drawMenu() {
-  ctx.fillStyle = "#b3e5fc";
+function drawBackground() {
+  ctx.fillStyle = "#b3e5fc"; //sky back
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  ctx.fillStyle = "#01579b";
-  ctx.font = "bold 48px Roboto";
-  ctx.textAlign = "center";
-  ctx.fillText("🐼 Panda Jump", canvas.width / 2, canvas.height / 2 - 40);
-
-  ctx.font = "26px Roboto";
-  ctx.fillText(
-    "Press Space or click to start",
-    canvas.width / 2,
-    canvas.height / 2 + 20
-  );
+  ctx.strokeStyle = "#333";
+  ctx.lineWidth = 8;
+  ctx.strokeRect (0, 0, canvas.width, canvas.height);
 }
 
-drawMenu();
+const pandaImg = new Image();
+pandaImg.src = "./assets/images/panda1.png";
 
-function startGame() {
-  window.location.href = "pages/level1.html";
+function drawPanda(x, y) {
+  ctx.drawImage(pandaImg, x - 25, y - 25, 50, 50);
+}
+
+function drawTitle() {
+  ctx.fillStyle = "black"
+  ctx.font = "bold 28px monospace";
+  ctx.textAlign = "center";
+  ctx.fillText("🐼 Panda Jump 🐼", canvas.width /2,200);
+
+  ctx.font = "16px monospace"
+  ctx.fillText("Press space or click to Start", canvas.width /2,250);
+}
+
+function gameLoop() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBackground();
+  drawTitle();
+  drawPanda(canvas.width / 2, canvas.height -80);
+  
+  requestAnimationFrame(gameLoop);
 }
 
 document.addEventListener("keydown", (e) => {
-  if (e.code === "Space") {
-    startGame();
+  if(e.code === "Space") {
+    window.location.href = "../pages/level1.html"; 
   }
-});
-canvas.addEventListener("click", startGame);
+})
+
+canvas.addEventListener("click", () => {
+  window.location.href = "../pages/level1.html";
+})
+
+
+gameLoop();

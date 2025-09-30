@@ -3,27 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta rel="icon" type="image/png" href="./assets/images/panda1.png" />
-    <meta name="author" content="Shalom Alalade, Marissa Rico" />
+    <meta name="author" content="Marissa Rico" />
     <title>Panda Jump - Level 1</title>
+    <link rel="icon" href="../assets/images/panda1.png" type="image/png" />
     <link rel="stylesheet" href="../css/style.css" />
     <script src="../js/game.js" defer></script>
   </head>
   <body>
-    <header>
-      <p></p>
-    </header>
-    <main class="game" role="application">
-      <div id="player" role="figure" aria-label="Player"></div>
-      <div id="obstacle" role="figure" aria-label="Obstacle"></div>
-      <div id="goal" role="figure" aria-label="Boat Goal"></div>
-      <section>
-        <p id="game-over" hidden>GAME OVER!</p>
-        <p aria-hidden="true" aria-label="Game Hint">
-          Hint: Press Space or Tap Screen to Jump.
-        </p>
-      </section>
-    </main>
-    <footer></footer>
+    <div class="cabinet">
+      <header class="hud">
+        <p class="score">Score: <output id="score">0</output></p>
+        <p class="hint" aria-hidden="true">Hint: Press Space or Tap to Jump.</p>
+      </header>
+      <main class="game" role="application" aria-label="Play area">
+        <div id="player" role="figure" aria-label="Panda"></div>
+        <div
+          id="obstacle"
+          role="figure"
+          aria-label="Water spout obstacle"
+        ></div>
+        <div id="goal" role="figure" aria-label="Boat Goal"></div>
+        <p id="game-over" hidden>GAME OVER 💦</p>
+        <div class="scanlines" aria-hidden="true"></div>
+      </main>
+    </div>
   </body>
 </html>

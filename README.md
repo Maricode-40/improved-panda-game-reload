@@ -1,5 +1,5 @@
 
-# Panda Jumping Game 🎮
+# Panda-Retro Jumping Game - 🎮
 
 # Objective
 
@@ -22,18 +22,12 @@ Used technologies:
 
 HTML canvas element as container for graphics, then using a script for the drawing.
 
- < main > → game container
-
-< header > → live score - span text -
-
-< section > → play area with the panda (player), spour water (obstacle), and yatch (goal).
+→ play area with the panda (player), spour water (obstacle), and yatch (goal).
 
  → game-over message
  → easy instructions 
 
-CSS3 handles the layout and visuals: Background gradient for the water/sky
-
-Panda, boat, and fountain displayed as images (background: url ( ...) )
+CSS3 handles the layout and visuals: Background gradient for the water/sky Panda, boat, and fountain displayed as images (background: url ( ...) )
 
 Positioning: Flex, rAF , TOTAL_LAPS, responsivness.
 
@@ -41,8 +35,7 @@ JavaScript manages the game logic:
 
 Variables for player, obstacle, goal, score, game speed
 
-A jump function that makes the panda jump with requestAnimationFrame (rAF). 
-A loop that moves the spour water across the screen.
+A loop that moves the spour water across the screen. The loop:  * Moves the obstacle * Checks collisions * updates score/game state. 
 
 👩🏽‍💻 Capturing Events.
 
@@ -50,11 +43,35 @@ Collision detection: if the panda hits the spour water → Game Over
 
 Win condition: if the panda reaches the yatch → You Win!
 
-The loop:  * Moves the obstacle * Checks collisions * updates score/game state. 
 
 Fully responsive as we use relative size in css.
+Initialization
 
-This model is intentionally simple, so you can follow along and understand how the different parts (HTML for structure, CSS for style, JS for behaviour - ) alligned together to create a fancy 2D mini-game.
+initDOM() → grabs your HTML elements.
+
+initSounds() → loads your audio files.
+
+resizeGame() → sets JUMP_HEIGHT, obstacle width, game speed.
+
+Controls
+
+Event listeners (keydown + click) call jump().
+
+On resize, it recalculates the game size.
+
+Game Loop
+
+movePlayerForward() → Panda walks.
+
+updateObstaclePosition() → moves obstacle.
+
+checkCollision() → checks hit obstacle or reached goal.
+
+jump() → Panda jump logic + sound.
+
+End Game: endGame(win) → shows "YOU WIN" or "GAME OVER", plays sound.
+
+![Diagram](./assets/images/diagram.png)
 
 # Views 
 
