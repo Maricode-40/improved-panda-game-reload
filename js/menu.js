@@ -13,7 +13,7 @@ function drawBackground() {
 }
 
 const pandaImg = new Image();
-pandaImg.src = "./assets/images/panda1.png";
+pandaImg.src = "assets/images/panda1.png";
 
 function drawPanda(x, y) {
   const size = canvas.width *0.15;
