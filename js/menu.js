@@ -40,12 +40,12 @@ function gameLoop() {
 
 document.addEventListener("keydown", (e) => {
   if(e.code === "Space") {
-    window.location.href = "../pages/level1.html"; 
+    window.location.href = "pages/level1.html"; 
   }
 })
 
 canvas.addEventListener("click", () => {
-  window.location.href = "../pages/level1.html";
+  window.location.href = "pages/level1.html";
 })
 
 
