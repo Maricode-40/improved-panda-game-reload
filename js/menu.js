@@ -16,17 +16,18 @@ const pandaImg = new Image();
 pandaImg.src = "./assets/images/panda1.png";
 
 function drawPanda(x, y) {
-  ctx.drawImage(pandaImg, x - 25, y - 25, 50, 50);
+  const size = canvas.width *0.15;
+  ctx.drawImage(pandaImg, x - size / 2, y - size / 2, size, size);
 }
 
 function drawTitle() {
   ctx.fillStyle = "black"
   ctx.font = "bold 28px monospace";
   ctx.textAlign = "center";
-  ctx.fillText("🐼 Panda Jump 🐼", canvas.width /2,200);
+  ctx.fillText("🐼 Panda Jump 🐼", canvas.width /2, canvas.height * 0.25);
 
   ctx.font = "16px monospace"
-  ctx.fillText("Press space or click to Start", canvas.width /2,250);
+  ctx.fillText("Press space or click to Start", canvas.width /2, canvas.height * 0.35);
 }
 
 function gameLoop() {
