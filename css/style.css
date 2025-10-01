@@ -1,29 +1,29 @@
-body {
+html body {
   margin: 0;
   display: grid;
   place-items: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   background: #2c2c2c;
+  overflow: hidden;
 }
 
 .cabinet {
   display: flex;
   flex-direction: column; /* HUD arriba, juego abajo */
   align-items: center;
-  gap: 8px; /* separación entre HUD y juego */
-  padding: 12px;
+  justify-content: center;
+  gap: 6px; /* separación entre HUD y juego */
 
   /* aspecto "arcade" */
   border: 8px solid #111;
   border-radius: 12px;
   background: #1a1a1a;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+  height: 100vh;
 }
-
-
 
 .menu-screen canvas {
   width: min(92vw, 480);
