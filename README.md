@@ -31,20 +31,10 @@ CSS3 handles the layout and visuals: Background gradient for the water/sky Panda
 
 Positioning: Flex, Grid rAF , TOTAL_LAPS, responsivness.
 
-JavaScript manages the game logic:
+JavaScript manages the game logic:   Variables for player, obstacle, goal, score, game speed. A loop that moves the spour water across the screen.
+The loop:  * Moves the obstacle * Checks collisions * updates score/game state.  👩🏽‍💻 Capturing Events.  Collision detection: if the panda hits the spour water → Game Over
 
-Variables for player, obstacle, goal, score, game speed
-
-A loop that moves the spour water across the screen. The loop:  * Moves the obstacle * Checks collisions * updates score/game state. 
-
-👩🏽‍💻 Capturing Events.
-
-Collision detection: if the panda hits the spour water → Game Over
-
-Win condition: if the panda reaches the yatch → You Win!
-
-
-Fully responsive as we use relative size in css.
+Win condition: if the panda reaches the yatch → You Win!   Fully responsive as we use relative size in css.
 Initialization
 
 initDOM() → grabs your HTML elements.
@@ -53,9 +43,7 @@ initSounds() → loads your audio files.
 
 resizeGame() → sets JUMP_HEIGHT, obstacle width, game speed.
 
-Controls
-
-Event listeners (keydown + click) call jump().
+Controls: Event listeners (keydown + click) call jump().
 
 On resize, it recalculates the game size.
 
