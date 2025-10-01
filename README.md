@@ -20,16 +20,16 @@ Used technologies:
 
 ### Features
 
-HTML canvas element as container for graphics, then using a script for the drawing.
+HTML Canvas element as container for graphics, then using a script for the drawing.
 
-→ play area with the panda (player), spour water (obstacle), and yatch (goal).
+→ play area with the panda (player), spour water (obstacle), and yatch (goal), Retro effect.
 
  → game-over message
  → easy instructions 
 
 CSS3 handles the layout and visuals: Background gradient for the water/sky Panda, boat, and fountain displayed as images (background: url ( ...) )
 
-Positioning: Flex, rAF , TOTAL_LAPS, responsivness.
+Positioning: Flex, Grid rAF , TOTAL_LAPS, responsivness.
 
 JavaScript manages the game logic:
 
@@ -59,7 +59,7 @@ Event listeners (keydown + click) call jump().
 
 On resize, it recalculates the game size.
 
-Game Loop
+Game Loop - Call actions- collitions.
 
 movePlayerForward() → Panda walks.
 
@@ -73,28 +73,36 @@ End Game: endGame(win) → shows "YOU WIN" or "GAME OVER", plays sound.
 
 ![Diagram](./assets/images/diagram.png)
 
+
 # Views 
 
 Some of the views can be seen  below: 
 
-![Windows Mobile View](#)
+![Windows Mobile View](/assets/images/retropanda.png)
 
-![Windows Desktop View](#)
+![Windows Desktop View](/assets/images/retro2.png)
+
+> [!CAUTION] ⚠️
+> The panda cannot double jump (yet 😉).
+
 
 # Future improvements 
 
 Summary in a nutshell:
 
-- Levels with speed scaling → for challenge (using JavaScript´s ES6)
+- Levels with speed scaling →  for challenge. 
+- Using JavaScript´s ES6 
 - Lives + animations → for fun & fairness.
-- Use html canvas tags to create a multi-layer page for the web app
-- Retro-style to improve visuals. 
+
 
 # Collaborators 
 - Maricode-40 / Marissa Rico Developer 
 
+## Contact 👩🏽‍💻
+
+<a href="https://www.linkedin.com/in/marissarico" target="_blank"> <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+
+
 # Deploy 🚀 🚀 
  🎮 Live Demo 
-👉 [**Click here to play the game!**]
-
-
+👉 [**Click here to play the game!**](https://maricode-40.github.io/improved-panda-game-reload/)
