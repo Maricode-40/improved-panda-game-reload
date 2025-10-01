@@ -33,7 +33,7 @@ function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawBackground();
   drawTitle();
-  drawPanda(canvas.width / 2, canvas.height -80);
+  drawPanda(canvas.width / 2, canvas.height *0.9);
   
   requestAnimationFrame(gameLoop);
 }
